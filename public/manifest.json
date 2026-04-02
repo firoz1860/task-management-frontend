@@ -1,0 +1,19 @@
+{
+  "name": "TaskFlow — Manage Your Tasks",
+  "short_name": "TaskFlow",
+  "description": "A beautiful, modern task management system",
+  "start_url": "/tasks",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a8a",
+  "orientation": "portrait-primary",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

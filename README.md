@@ -12,6 +12,98 @@
 
 Next.js 14 frontend for the TaskFlow Task Management System.
 
+task-management-system/
+├── backend/                          # Node.js + TypeScript + Prisma
+│   ├── prisma/
+│   │   ├── schema.prisma
+│   │   └── migrations/
+│   ├── src/
+│   │   ├── config/
+│   │   │   ├── env.ts
+│   │   │   └── cors.ts
+│   │   ├── middleware/
+│   │   │   ├── auth.middleware.ts
+│   │   │   ├── error.middleware.ts
+│   │   │   └── validate.middleware.ts
+│   │   ├── modules/
+│   │   │   ├── auth/
+│   │   │   │   ├── auth.controller.ts
+│   │   │   │   ├── auth.service.ts
+│   │   │   │   ├── auth.routes.ts
+│   │   │   │   └── auth.dto.ts
+│   │   │   └── tasks/
+│   │   │       ├── tasks.controller.ts
+│   │   │       ├── tasks.service.ts
+│   │   │       ├── tasks.routes.ts
+│   │   │       └── tasks.dto.ts
+│   │   ├── utils/
+│   │   │   ├── jwt.ts
+│   │   │   ├── hash.ts
+│   │   │   └── response.ts
+│   │   ├── types/
+│   │   │   └── express.d.ts
+│   │   └── app.ts
+│   ├── .env
+│   ├── .env.example
+│   ├── .gitignore
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── README.md
+│
+└── frontend/                         # Next.js 14 + TypeScript + Tailwind
+    ├── app/
+    │   ├── (auth)/
+    │   │   ├── login/
+    │   │   │   └── page.tsx
+    │   │   └── register/
+    │   │       └── page.tsx
+    │   ├── (dashboard)/
+    │   │   └── tasks/
+    │   │       ├── page.tsx
+    │   │       └── [id]/
+    │   │           └── page.tsx
+    │   ├── api/
+    │   │   └── refresh/
+    │   │       └── route.ts
+    │   ├── layout.tsx
+    │   ├── globals.css
+    │   └── page.tsx
+    ├── components/
+    │   ├── ui/
+    │   │   ├── Button.tsx
+    │   │   ├── Input.tsx
+    │   │   ├── Modal.tsx
+    │   │   ├── Toast.tsx
+    │   │   └── Badge.tsx
+    │   ├── tasks/
+    │   │   ├── TaskCard.tsx
+    │   │   ├── TaskForm.tsx
+    │   │   ├── TaskFilters.tsx
+    │   │   └── TaskList.tsx
+    │   └── layout/
+    │       ├── Navbar.tsx
+    │       └── Sidebar.tsx
+    ├── hooks/
+    │   ├── useAuth.ts
+    │   ├── useTasks.ts
+    │   └── useToast.ts
+    ├── lib/
+    │   ├── api.ts                    # Axios instance with interceptors
+    │   ├── auth.ts                   # Token helpers
+    │   └── utils.ts
+    ├── types/
+    │   └── index.ts
+    ├── context/
+    │   ├── AuthContext.tsx
+    │   └── ToastContext.tsx
+    ├── .env.local
+    ├── .env.example
+    ├── .gitignore
+    ├── next.config.ts
+    ├── tailwind.config.ts
+    ├── package.json
+    └── README.md
+
 ## Tech Stack
 
 - **Next.js 14** (App Router) — React framework

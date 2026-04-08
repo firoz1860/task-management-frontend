@@ -12,6 +12,7 @@
 
 Next.js 14 frontend for the TaskFlow Task Management System.
 
+```bash
 task-management-system/
 ├── backend/                          # Node.js + TypeScript + Prisma
 │   ├── prisma/
@@ -36,13 +37,13 @@ task-management-system/
 │   │   │       ├── tasks.service.ts
 │   │   │       ├── tasks.routes.ts
 │   │   │       └── tasks.dto.ts
-│   │   ├── utils/
-│   │   │   ├── jwt.ts
-│   │   │   ├── hash.ts
-│   │   │   └── response.ts
-│   │   ├── types/
-│   │   │   └── express.d.ts
-│   │   └── app.ts
+│   ├── utils/
+│   │   ├── jwt.ts
+│   │   ├── hash.ts
+│   │   └── response.ts
+│   ├── types/
+│   │   └── express.d.ts
+│   └── app.ts
 │   ├── .env
 │   ├── .env.example
 │   ├── .gitignore
